@@ -1,0 +1,8 @@
+# Document Parsers
+pypdf
+
+# For Retrieval Augmented Generation
+langchain
+langchain-community
+langcahin-openai
+langchain-ollama
