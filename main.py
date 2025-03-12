@@ -1,5 +1,5 @@
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_core.vectorstores import InMemoryVectorStore
+from langchain.vectorstores import Chroma
 from langchain_ollama import OllamaEmbeddings
 from langchain_text_splitters import CharacterTextSplitter
 
@@ -41,8 +41,14 @@ ollama_emb = OllamaEmbeddings(
     model = local_model
 )
 
-vector_store = InMemoryVectorStore(ollama_emb)
-document_ids = vector_store.add_documents(documents=all_splits)
+# Initialize a light db for vector store
+
+db = Chroma(persist_directory = "./chroma_db", embedding_function = ollama_emb)
+
+document_ids = db.add_documents(documents=all_splits)
+
+db.persist()
 
 print(document_ids[:3])
+
 
