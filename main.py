@@ -73,17 +73,24 @@ else:
     )
     all_splits = text_splitter.split_documents(docs)
 
+    ids = [f"doc_{i}" for i in range(len(all_splits))]  # Unique IDs
+    documents = [doc.page_content for doc in all_splits]  # Extract text
+    metadatas = [doc.metadata for doc in all_splits]  # Extract metadata
+
+
     knowledge_base.add(
-    documents=[doc_hash],
-    ids=["id 1"]
+    documents=documents,
+    ids=ids,
+    metadatas=metadatas
     
     )
+
+
 
     print(f"Split blog post into {len(all_splits)} sub-documents.")
 
     # document_ids = chroma_client.add_documents(documents=all_splits)
     print({f"Docuements successfully embedded "})
-
 
 
 
