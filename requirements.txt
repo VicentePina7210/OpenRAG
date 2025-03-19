@@ -2,6 +2,9 @@
 # Document Parsers
 pypdf
 
+# Model dependencies
+ollama
+
 # Retrieval Augmented Generation
 langchain
 langchain-community
@@ -10,3 +13,5 @@ langchain-ollama
 
 # Vector Store (Likely to change)
 chromadb
+setence_transfrormers
+
