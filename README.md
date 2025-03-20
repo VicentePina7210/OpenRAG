@@ -1,5 +1,6 @@
 # How is this any different from OpenWebUI??
 OpenRAG is focused on the quality and customization of Retrieval Augmented Generation.
+<br>
 ✅ Retrieve specific documents instead of LLM response
 <br>
 ✅ LLM generated response
