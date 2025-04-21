@@ -15,3 +15,5 @@ langchain-ollama
 chromadb
 setence_transfrormers
 
+# Api to communicate to UI
+fastapi[standard]

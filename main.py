@@ -173,9 +173,12 @@ Users can connect to other hosted serves of ollama
 Implement Messages from Ollama so that users can ask follow up questions
 Allow users to connect to OpenAI api and similar llm providers
 
+To fix:
+
 UI Development
 Users can modify prompting in UI, having different presets for models
 Users can select models from what is stored on their instance of ollama.
 Custom parameter adjustment
+Stream response
 
 """
