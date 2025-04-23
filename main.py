@@ -59,18 +59,6 @@ knowledge_base = chroma_client.get_or_create_collection(
 
 persistent_client = chromadb.PersistentClient() # Not recomended for production
 
-
-
-# Add Documents to the collection (knowledge_base)
-# knowledge_base.add(
-#     documents=[doc_hash],
-#     ids=["id 1"]
-    
-# )
-
-
-
-
 # chroma_db.aadd_documents([doc_hash])
 if doc_hash in knowledge_base.peek():
     print("Document already processed, skipping embedding.")

@@ -25,7 +25,7 @@ async def upload_pdf(file: UploadFile = File(...)):
         f.write(await file.read())
 
     # Optional: Call your embedding function here with the saved file
-    # embed_pdf(file_location)
+
 
     return JSONResponse(content={"message": f"Successfully uploaded {file.filename}"})    
  
